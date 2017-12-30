@@ -42,7 +42,8 @@ export class HomePage {
             // returns an observable
             this.weatherProvider.getWeather(this.location.city, this.location.state).
             subscribe(weather => {
-                this.weather = weather.current_observation;
+                let tempWeather:any = weather;
+                this.weather = tempWeather.current_observation;
             })
         });
 
